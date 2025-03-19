@@ -28,6 +28,150 @@
 
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+<style type="text/css">
+    .data-do-evento {
+        font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+        font-size: 24px; 
+        font-weight:700;
+        color:#111;
+        }
+
+
+    .tipo-de-evento {
+        font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+        font-size: 20px; 
+        font-weight:700;
+        color:#111;
+    }
+
+
+    .padding-top-10 {
+        padding-top: 10px;
+    }
+
+    /* Estilo para desktop */
+    h3 {
+        padding-top: 0;
+    }
+
+    /* Estilo para dispositivos móveis */
+    @media (max-width: 768px) {
+        h3 {
+            padding-top: 30px;
+        }
+    }
+
+
+
+.container {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+            0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+  min-width:370px;
+}
+
+
+
+.left-container {
+  flex:1;
+  height:480px;
+  background-color:$teal;
+}
+.right-container {
+  display:flex;
+  flex:1;
+  height:460px;
+  background-color: $white;
+  justify-content:center;
+  align-items:center;
+}
+
+.left-container {
+  display:flex;
+  flex:1;
+  height:480px;
+  justify-content:center;
+  align-items:center;
+    color:$white;
+}
+
+.left-container p {
+  font-size:0.9rem;
+}
+
+.right-inner-container {
+  width:70%;
+  height:80%;
+  text-align:center;
+}
+
+.left-inner-container {
+  height:50%;
+  width:80%;
+  text-align:center;
+  line-height:22px;
+}
+
+input, textarea {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+  font-size:0.8rem;
+}
+
+input:focus, textarea:focus{
+  outline:1px solid $teal;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #00b4cf;
+    background-color: #00b4cf;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.7;
+}
+@media only screen and (max-width: 600px) {
+  .left-container{
+    display: none;
+  }
+  .lg-view {
+    display:none;  
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display:none;  
+  }
+}
+
+form p {
+  text-align:left;
+}
+
+</style>
+    
+
 </head>
 <body>
 
@@ -50,11 +194,10 @@
 
 <div id="wrapper">
 
-    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+    <header id="" class="scrollto clearfix" data-enllax-ratio=".5">
         <div id="header" class="nav-collapse">
             <div class="row clearfix">
-                <div class="col-1">
-
+                <div class="col-1" style="padding-left: 0px;">
                     <!--Logo-->
                     <div id="logo">
 
@@ -135,20 +278,41 @@
         <!--Banner Content-->
         <div id="banner-content" class="row clearfix">
 
-            <div class="col-38">
+    <div class="row clearfix">
 
-                <div class="section-heading">
-                    <h1>Onde as histórias ganham vida!</h1>
-                    <h2>A Rolinvicta é a maior convenção de jogos narrativos do Porto! Junta-te a nós para viver aventuras épicas e explorar mundos fantásticos. Aberto a todos, desde novatos a veteranos – a única regra é divertir-se!</h2>
-                </div>
-
-                <!--Call to Action-->
-                <a href="#" class="button">Ver cartaz</a>
-                <!--End Call to Action-->
-
+        <div class="col-3">
+            <div class="section-heading">
+                <h3>Neque porro quisquam!</h3>
+                <h2 class="section-title">Lorem ipsum dolor sit amet.</h2>
+                <p class="section-subtitle">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
             </div>
+        </div>
 
-        </div><!--End of Row-->
+        <div class="col-2-3">
+            <!-- Formulário substituindo os blocos de ícones -->
+              <div class="form-container">
+                
+                <div class="right-container">
+                  <div class="right-inner-container">
+                    <form action="#">
+                        <input type="text" placeholder="Name *"  />
+                        <input type="email" placeholder="Email *" />
+                        <input type="text" placeholder="Company" />
+                        <input type="phone" placeholder="Phone" />
+                        <textarea rows="4" placeholder="Message"></textarea>
+                        <button>Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Fim do formulário -->
+        </div>
+
+    </div>
+
+</div>
+
     </header>
 
 
