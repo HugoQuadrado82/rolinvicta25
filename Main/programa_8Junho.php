@@ -63,8 +63,20 @@
         }
     }
 
-</style>
-    
+.pricing-block-content {
+    padding-left: 10px;
+    padding-top: 0px;
+    border: 2px solid #1b66a5; /* Cor azul personalizada */
+    border-radius: 5px; /* Opcional: cantos arredondados */
+    padding: 10px; /* Espaço interno */
+}
+
+.pricing-block {
+    padding-top: 0px;
+}
+
+
+</style>    
 
 </head>
 <body>
@@ -131,35 +143,7 @@
                     </aside>
 
                     <!--Main Navigation-->
-                    <nav id="nav-main">
-                        <ul>
-                            <li>
-                                <a href="https://rolinvicta.pt/site/index.html"><span>HOME</span></a>
-                            </li>
-
-                            <li>
-                                <a href="https://rolinvicta.pt/site/programa.html">Programa</a>
-                            </li>
-                            <li>
-                                <a href="#Sessões">Sessões</a>
-                            </li>
-                            <li>
-                                <a href="#Palestras">Palestras</a>
-                            </li>
-                            <li>
-                                <a href="#Workshops">Workshops</a>
-                            </li>
-                            <li>
-                                <a href="#ComoChegar">Como chegar</a>
-                            </li>
-                            <li>
-                                <a href="#Galeria">Galeria</a>
-                            </li>
-                            <li>
-                                <a href="#Contactos">Contactos</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <?php include 'menu.php'; ?>
                     <!--End of Main Navigation-->
 
                     <div id="nav-trigger"><span></span></div>
@@ -170,52 +154,95 @@
         </div><!--End of Header-->
 
         <!--Banner Content-->
-        <div id="banner-content" class="row clearfix">
-
-            <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
-
-            <div class="row clearfix">
-
-                <div class="section-heading">
-                    <!-- <h3>FEEDBACK</h3> -->
-                    <h2 class="section-title">Conheça os Dungeons Masters!</h2>
+<div id="banner-content" class="row clearfix" style="padding-bottom: 0px;">
+            <div class="row clearfix padding-top-10" style="padding-bottom: 0px;">
+                   <h1 class="data-do-evento">Domingo 8 Junho!</h1>
+                    <h1 class="tipo-de-evento">10H-13H</h1>
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="pricing-block-content">
+                        <h3>Sessões</h3>
+                       <!-- <p class="pricing-sub">10h-13h</p> -->
+                        <ul>
+                            <li>MESA 1 | D&D</li>
+                            <li>MESA 2 | D&D Crianças</li>
+                            <li>MESA 3 | Mais D&D</li>
+                            <li>MESA 4 | Ainda mais D&D</li>
+                            <li>MESA 5 | Mais do mesmo D&D</li>
+                            <li>MESA 6 | Novidade! D&D</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-1.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
+                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="pricing-block-content">
+                        <h3>Palestras</h3>
+                        <ul>
+                            <li><span class="hora">11H-12H</span><br>Neurodivergência e jogos Narrativos<br>Sofia Vilhena<br><p class="pricing-sub">Sala 4</p></li>
+                        </ul>
+                        <p>Estudos mostram que os jogos narrativos têm benefícios para as crianças neurodivergentes.</p>
+                        <p>Sofia Vilhena é formada em Educação Especial e vem partilhar as aprendizagens que traz das suas sessões de D&D com crianças autistas.</p>
+                    </div>
+                </div>
 
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-2.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
 
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-3.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="pricing-block-content">
+                        <h3>Workshop</h3>
+                        <ul>
+                            <li><span class="hora">11H-13H</span><br>Como ser um mestre a improvisar<br>Gilberto Felismino<p class="pricing-sub">Sala 6</p></li>
+                        </ul>
+                        <p>Gostarias de ser o melhor a improvisar momentos mirabilantes na tua aventura?</p>
+                        <p>Participa neste workshop e aprende todas as técnicas e truques que um mestre de improvisação tem para te ensinar!</p>
+                    </div>
+                </div>
+
+                <!--End Pricing Block-->
 
             </div>
 
-        </aside>
+
+<div class="row clearfix padding-top-10" style="padding-bottom: 0px;">
+                    <h1 class="tipo-de-evento">14H-16H</h1>
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="pricing-block-content">
+                        <h3>Sessões</h3>
+                       <!-- <p class="pricing-sub">10h-13h</p> -->
+                        <ul>
+                            <li>MESA 1 | D&D</li>
+                            <li>MESA 2 | D&D Crianças</li>
+                            <li>MESA 3 | Mais D&D</li>
+                            <li>MESA 4 | Ainda mais D&D</li>
+                            <li>MESA 5 | Mais do mesmo D&D</li>
+                            <li>MESA 6 | Novidade! D&D</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="pricing-block-content">
+                        <h3>Palestras</h3>
+                        <ul>
+                            <li><span class="hora">11H-12H</span><br>Neurodivergência e jogos Narrativos<br>Sofia Vilhena<br><p class="pricing-sub">Sala 4</p></li>
+                        </ul>
+                        <p>Estudos mostram que os jogos narrativos têm benefícios para as crianças neurodivergentes.</p>
+                        <p>Sofia Vilhena é formada em Educação Especial e vem partilhar as aprendizagens que traz das suas sessões de D&D com crianças autistas.</p>
+                    </div>
+                </div>
 
 
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="pricing-block-content">
+                        <h3>Workshop</h3>
+                        <ul>
+                            <li><span class="hora">11H-13H</span><br>Como ser um mestre a improvisar<br>Gilberto Felismino<p class="pricing-sub">Sala 6</p></li>
+                        </ul>
+                        <p>Gostarias de ser o melhor a improvisar momentos mirabilantes na tua aventura?</p>
+                        <p>Participa neste workshop e aprende todas as técnicas e truques que um mestre de improvisação tem para te ensinar!</p>
+                    </div>
+                </div>
+
+                <!--End Pricing Block-->
+            </div>            
         </div>
     </header>
 

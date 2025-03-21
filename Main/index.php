@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon"/>
+    <link rel="shortcut icon" href="images/favicon.png" title="Favicon"/>
 
     <!-- Main CSS Files -->
     <link rel="stylesheet" href="css/style.css">
@@ -28,44 +28,6 @@
 
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-
-<style type="text/css">
-    .data-do-evento {
-        font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-        font-size: 24px; 
-        font-weight:700;
-        color:#111;
-        }
-
-
-    .tipo-de-evento {
-        font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-        font-size: 20px; 
-        font-weight:700;
-        color:#111;
-    }
-
-
-    .padding-top-10 {
-        padding-top: 10px;
-    }
-
-    /* Estilo para desktop */
-    h3 {
-        padding-top: 0;
-    }
-
-    /* Estilo para dispositivos móveis */
-    @media (max-width: 768px) {
-        h3 {
-            padding-top: 30px;
-        }
-    }
-
-</style>
-    
-
 </head>
 <body>
 
@@ -88,10 +50,11 @@
 
 <div id="wrapper">
 
-    <header id="" class="scrollto clearfix" data-enllax-ratio=".5">
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
         <div id="header" class="nav-collapse">
             <div class="row clearfix">
-                <div class="col-1" style="padding-left: 0px;">
+                <div class="col-1">
+
                     <!--Logo-->
                     <div id="logo">
 
@@ -131,35 +94,8 @@
                     </aside>
 
                     <!--Main Navigation-->
-                    <nav id="nav-main">
-                        <ul>
-                            <li>
-                                <a href="https://rolinvicta.pt/site/index.html"><span>HOME</span></a>
-                            </li>
+                    <?php include 'menu.php'; ?>
 
-                            <li>
-                                <a href="https://rolinvicta.pt/site/programa.html">Programa</a>
-                            </li>
-                            <li>
-                                <a href="#Sessões">Sessões</a>
-                            </li>
-                            <li>
-                                <a href="#Palestras">Palestras</a>
-                            </li>
-                            <li>
-                                <a href="#Workshops">Workshops</a>
-                            </li>
-                            <li>
-                                <a href="#ComoChegar">Como chegar</a>
-                            </li>
-                            <li>
-                                <a href="#Galeria">Galeria</a>
-                            </li>
-                            <li>
-                                <a href="#Contactos">Contactos</a>
-                            </li>
-                        </ul>
-                    </nav>
                     <!--End of Main Navigation-->
 
                     <div id="nav-trigger"><span></span></div>
@@ -172,55 +108,55 @@
         <!--Banner Content-->
         <div id="banner-content" class="row clearfix">
 
-            <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
-
-            <div class="row clearfix">
+            <div class="col-38">
 
                 <div class="section-heading">
-                    <!-- <h3>FEEDBACK</h3> -->
-                    <h2 class="section-title">Conheça os Dungeons Masters!</h2>
+                    <h1>Onde as histórias ganham vida!</h1>
+                    <h2>A Rolinvicta é a maior convenção de jogos narrativos do Porto! Junta-te a nós para viver aventuras épicas e explorar mundos fantásticos. Aberto a todos, desde novatos a veteranos – a única regra é divertir-se!</h2>
                 </div>
 
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-1.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-2.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-3.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
+                <!--Call to Action-->
+                <a href="#" class="button">Ver cartaz</a>
+                <!--End Call to Action-->
 
             </div>
 
-        </aside>
-
-
-        </div>
+        </div><!--End of Row-->
     </header>
 
 
 </div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".submenu").forEach(function (sub) {
+        sub.classList.remove("open"); // Garante que começa fechado
+    });
+
+    document.querySelectorAll(".toggle-submenu").forEach(function (menu) {
+        menu.addEventListener("click", function (event) {
+            event.preventDefault();
+            
+            let submenu = this.nextElementSibling;
+            let isOpen = submenu.classList.contains("open");
+
+            document.querySelectorAll(".submenu").forEach(function (sub) {
+                sub.classList.remove("open");
+            });
+
+            if (!isOpen) {
+                submenu.classList.add("open");
+            }
+        });
+    });
+});
+
+
+
+</script>
+
+
 
 <!-- Include JavaScript resources -->
 <script src="js/jquery.1.8.3.min.js"></script>
