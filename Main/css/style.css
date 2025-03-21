@@ -503,7 +503,7 @@ section {
 /*Navigation Solid*/
 
 #header.nav-solid [class*='col-'] {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 #header.nav-solid {
@@ -1423,7 +1423,11 @@ blockquote {
     display: inline-block;
 }
 
-/* --------- 6.7 Pricing Table ---------- */
+/* --------- 6.7 Table ---------- */
+
+.hora {
+    font-weight: bold;
+}
 
 .pricing-block-content {
     background: #fff;
@@ -1457,7 +1461,7 @@ blockquote {
 
 .pricing-sub {
     font-style: italic;
-    color:#ccc;
+    color:#3f3f3f;
     margin:0 0 25px 0;
 }
 
@@ -2071,6 +2075,89 @@ blockquote {
         transform: translate(220%, 220%);
     }
 }
+
+
+/* Estilização do submenu */
+nav#nav-main ul li.has-submenu {
+    position: relative;
+}
+
+nav#nav-main ul li.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+nav#nav-main ul li.has-submenu:hover .submenu {
+    display: block;
+}
+
+nav#nav-main ul li.has-submenu .submenu li {
+    padding: 10px 15px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+nav#nav-main ul li.has-submenu .submenu li:last-child {
+    border-bottom: none;
+}
+
+nav#nav-main ul li.has-submenu .submenu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+nav#nav-main ul li.has-submenu .submenu li a:hover {
+    background: #fafafa;
+}
+
+
+nav#nav-mobile ul li.has-submenu .submenu {
+    display: none;
+    position: static;
+    background: none;
+    box-shadow: none;
+}
+
+nav#nav-mobile ul li.has-submenu.open .submenu {
+    display: block;
+}
+
+nav#nav-mobile ul li.has-submenu .submenu li {
+    padding: 8px 15px;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    background: #f9f9f9;
+}
+
+
+/* Mostra quando a classe "open" está ativa */
+.submenu.open {
+    display: block;
+}
+
+/* Estilização para o ícone de seta indicando submenu */
+.has-submenu > .toggle-submenu::after {
+    content: " ▼";
+    font-size: 12px;
+}
+
+.has-submenu > .toggle-submenu.open::after {
+    content: " ▲";
+}
+
 
 /*------------------------------------------------------------------------------------------*/
 /* Responsive Elements */
