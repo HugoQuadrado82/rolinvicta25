@@ -976,6 +976,7 @@ blockquote {
 
 #gallery img {
     max-height: 300px;
+    margin: 4px;
 }
 
 #gallery [class*='col-'] {
@@ -2100,7 +2101,7 @@ nav#nav-main ul li.has-submenu:hover .submenu {
 }
 
 nav#nav-main ul li.has-submenu .submenu li {
-    padding: 10px 15px;
+/*     padding: 10px 15px; */
     white-space: nowrap;
     border-bottom: 1px solid #e1e1e1;
 }
