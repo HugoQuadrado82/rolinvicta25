@@ -1,3 +1,4 @@
+<?php require 'DB.php'; ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -63,7 +64,7 @@
                         <!--End of Banner Logo-->
 
                         <!--The Logo that is shown on the sticky Navigation Bar-->
-                        <img src="images/logo-2.png" id="navigation-logo" alt="Landing Page"/>
+                        <img src="images/logo.png" id="navigation-logo" alt="Landing Page"/>
                         <!--End of Navigation Logo-->
 
                     </div>
@@ -116,7 +117,7 @@
                 </div>
 
                 <!--Call to Action-->
-                <a href="#" class="button">Ver cartaz</a>
+                <a href="https://rolinvicta.pt/elf/inscricao_utilizador_add.php" class="button">Inscrições</a>
                 <!--End Call to Action-->
 
             </div>
@@ -159,19 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <!-- Include JavaScript resources -->
-<script src="js/jquery.1.8.3.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/featherlight.min.js"></script>
-<script src="js/featherlight.gallery.min.js"></script>
-<script src="js/jquery.enllax.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.stickyNavbar.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/images-loaded.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/site.js"></script>
-
+<?php include 'include_javascript.php'; ?>
 
 </body>
 </html>
