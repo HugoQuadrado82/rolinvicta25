@@ -5,10 +5,10 @@ class DB {
 
     private static function connect() {
         if (!self::$pdo) {
-            $host = 'rolinvicta.pt';
-            $dbname = 'rolinvi1_elf';
-            $user = 'rolinvi1_elf';
-            $pass = 'Roll2025!';
+            $host = '';
+            $dbname = '';
+            $user = '';
+            $pass = '';
 
             $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
             $options = [
