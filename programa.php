@@ -160,12 +160,32 @@
 
             <!--Banner Content-->
             <div id="banner-content" class="row clearfix" style="padding-bottom: 0px;">
+
+            <?php
+                            $result = DB::query("SELECT DISTINCT 
+                                CONCAT(
+                                    UPPER(LEFT(DATE_FORMAT(Data, '%W'), 1)), 
+                                    LOWER(SUBSTRING(DATE_FORMAT(Data, '%W'), 2)), ' ',
+                                    DAY(Data), ' ',
+                                    UPPER(LEFT(DATE_FORMAT(Data, '%M'), 1)), 
+                                    LOWER(SUBSTRING(DATE_FORMAT(Data, '%M'), 2))
+                                ) AS DataFormatada,
+                                DATE(Data) AS Link
+                            FROM Atividade , Evento_Atual
+                            WHERE (Atividade.`Status` = 'Em progresso' || Atividade.`Status` = 'Aguardando')
+                            AND (Atividade.Evento_Id = Evento_Atual.Evento)");
+
+                            foreach ($result as $rowMaster) {
+                                //link=$row->Link&title=$row->DataFormatad
+                                ?>
+                           
+
                 <div class="row clearfix padding-top-10" style="padding-bottom: 0px;">
                     <?php
-                    $title = $_GET["title"];
+                    $title = $rowMaster->DataFormatada;
                     $html = <<<HTML
 
-<h1 class="data-do-evento">$title!</h1>
+<h1 class="data-do-evento">$rowMaster->DataFormatada</h1>
 
 HTML;
                     echo $html;
@@ -190,7 +210,7 @@ LEFT JOIN Salas sa ON sa.Id = at.Sala_Id
 LEFT JOIN Mesa ma ON ma.Id = at.Mesa
 JOIN Evento_Atual ea ON ea.Evento = at.Evento_Id
 WHERE (at.`Status`='Aguardando' OR at.`Status` = 'Em progresso')
-AND Date(at.`Data`) = Date(?)", [$_GET["link"]]);
+AND Date(at.`Data`) = Date(?)", [$rowMaster->Link]);
 
                     $horas = array_column($resultados, 'Hora');
                     $horas = array_column($resultados, 'Hora');
@@ -292,7 +312,7 @@ HTML;
                     </div>
                     <!--End Pricing Block-->
                 <?php } ?>
-
+                <?php } ?>
             </div>
         </header>
 
