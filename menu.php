@@ -9,7 +9,6 @@
                     <li><a href="#Workshos">Workshos</a></li> -->
                     <li><a href="#ComoChegar">Como chegar</a></li>
                     <li><a href="galeria.php">Galeria</a></li>
-                    <li><a href="galeria.php">Galeria</a></li>
                     <li><a href="#Contactos">Contactos</a></li>
                     <li><a href="https://rolinvicta.pt/elf/login.php">Login</a></li>
                 </ul>
